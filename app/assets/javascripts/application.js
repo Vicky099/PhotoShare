@@ -73,3 +73,24 @@ function image_form() {
 	});
 }
 
+
+$(function() {
+	var fieldsCount, maxFieldsCount = 24, $addLink = $('a.add_nested_fields');
+
+	function toggleAddLink() {
+		$addLink.toggle(fieldsCount <= maxFieldsCount);
+	}
+
+	$(document).on('nested:fieldAdded', function() {
+		fieldsCount += 1;
+		toggleAddLink();
+	});
+
+	$(document).on('nested:fieldRemoved', function() {
+		fieldsCount -= 1;
+		toggleAddLink();
+	});
+
+	fieldsCount = $('form .fields').length;
+	toggleAddLink();
+});
