@@ -1,15 +1,13 @@
 development:
- adapter: mysql2
- encoding: utf8
- database: photo
- pool: 5
- username: root
- password: root
+  adapter: postgresql
+  host: localhost
+  database: photo_share
+  username: pguser
+  password: pguser
 
 test:
- adapter: mysql2
- encoding: utf8
- database: photo
- pool: 5
- username: root
- password: root
+  adapter: postgresql
+  database: photo_share
+  host: localhost
+  username: pguser
+  password: pguser
