@@ -29,9 +29,9 @@
             = f.text_field :tag_line, :class => "form-control"
         .form-group
           .col-xs-2.col-md-offset-1
-            = f.label :image, :class => "control-label"
+            = f.label :photo, :class => "control-label"
           .col-xs-4
-            = f.file_field :image,:class =>"form-control"
+            = f.file_field :photo,:class =>"form-control"
         .form-group
           .col-md-3.col-md-offset-1
             = f.submit "Upload image", :class => "btn btn-sm btn-success"
@@ -51,5 +51,5 @@
           .thumbnail
             = image.name
             = link_to '| Remove', image_path(:id => image.id, :album_id => @album.id), :method=>:delete, data: { confirm: 'Are you sure?' }
-            = image_tag image.image, :style => "width:100px;height:100px"
+            = image_tag image.photo.url, :style => "width:100px;height:100px"
             = image.tag_line

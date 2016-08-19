@@ -42,6 +42,12 @@ gem 'devise'
 gem 'paperclip', "~> 4.3"
 gem "nested_form"
 gem 'jquery-validation-rails'
+gem 'carrierwave'
+gem 'cloudinary'
+
+group :development, :test do
+  gem 'pry'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
