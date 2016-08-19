@@ -18,6 +18,6 @@
             %b
               = image.name
               = "| #{image.album.user.name}"
-            = image_tag image.image, :style => "width:130px;height:100px"
+            = image_tag image.photo.url, :style => "width:130px;height:100px"
             %b
               = image.tag_line
