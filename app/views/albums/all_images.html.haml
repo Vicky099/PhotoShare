@@ -25,5 +25,5 @@
             .col-sm-3
               .thumbnail
                 = image.name
-                = image_tag image.image, :style => "width:150px;height:150px"
+                = image_tag image.photo.url, :style => "width:150px;height:150px"
                 = image.tag_line

@@ -32,6 +32,6 @@ class AlbumsController < ApplicationController
   
   private
   def album_params
-    params.require(:album).permit(:name, :user_id, :_destroy,:images_attributes => [:name, :tag_line, :image, :album_id, :_destroy])
+    params.require(:album).permit(:name, :user_id, :_destroy,:images_attributes => [:name, :tag_line, :photo, :album_id, :_destroy])
   end
 end
